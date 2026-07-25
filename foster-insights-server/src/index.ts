@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import csvRoutes from "./routes/csvRoutes";
+import analyticsRoutes from "./routes/analyticsRoutes";
 
 // Load environment variables
 dotenv.config();
@@ -28,6 +29,9 @@ app.get("/health", (req: Request, res: Response) => {
 
 // CSV data routes
 app.use("/api/csv", csvRoutes);
+
+// Analytics routes
+app.use("/api/analytics", analyticsRoutes);
 
 // Start server
 app.listen(port, () => {
