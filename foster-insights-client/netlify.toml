@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  API_URL = "https://foster-insights-server.fly.dev"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -34,6 +34,6 @@ app.use("/api/csv", csvRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
 // Start server
-app.listen(port, () => {
+app.listen(Number(port), "0.0.0.0", () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
